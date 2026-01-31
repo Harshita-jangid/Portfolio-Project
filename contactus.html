@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+     <link rel="icon" type="image/x-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 70vh;
+            background: linear-gradient(120deg, #3a5a40, #588157);
+            background-size: 200% 200%;
+
+        }
+         nav{
+            border: 1px solid #dad7cd; 
+        } 
+        
+
+        .contact-container {
+            max-width: 900px;
+            width: 100%;
+            background: #dad7cd;
+            border-radius: 22px;
+            display: flex;
+            margin: auto;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            margin-top: 70px; 
+            margin-bottom: 20px; 
+        }
+
+        .contact-info {
+            padding: 50px;
+            width: 50%;
+        }
+
+        .contact-info h2 {
+            font-size: 50px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-family: "Allura", cursive;
+            font-weight: 700;
+            font-style: normal;
+            color: #3a5a40;
+        }
+
+        .contact-info p {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 22px;
+            font-size: 15px;
+        }
+
+        .info-item i {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 16px;
+            color: #3a5a40;
+        }
+
+        .socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .socials a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #fff;
+            color: #3a5a40;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .socials a:hover {
+            transform: translateY(-5px);
+            background: #f1f1f1;
+        }
+
+        .contact-form {
+            padding: 50px;
+            width: 50%;
+        }
+
+        .contact-form h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+            color: #333;
+            font-family: "Allura", cursive;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .input {
+            margin-bottom: 20px;
+        }
+
+        .input input,
+        .input textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input input:focus,
+        .input textarea:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+        }
+
+        textarea {
+            resize: none;
+            height: 130px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background-color: #3a5a40;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            width: 100%;
+            height: fit-content;
+            text-align: center;
+            background-color: #3a5a40;
+            border-top: 4px solid #588157;
+            color: #dad7cd;
+            padding: 4%;
+        }
+
+        footer a {
+            color: #dad7cd;
+        }
+
+        footer i {
+            font-size: 15px;
+            color: #dad7cd;
+            margin: 2px;
+            padding: 10px;
+        }
+
+        #d:hover{
+            color:teal;
+        }
+
+        @media(max-width:450px) {
+            .contact-container {
+                display: inline-block;
+            }
+
+            .contact-info {
+                width: auto;
+                text-align: center;
+            }
+
+            .info-item {
+                justify-content: left;
+            }
+
+            .contact-form {
+                width: auto;
+            }
+
+            .socials {
+                justify-content: center;
+            }
+
+            #back {
+                position: fixed;
+                background-color: #3a5a40;
+                margin: 20px;
+                color: #dad7cd;
+            }
+
+            #back a {
+                color: #dad7cd;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+     <div class="navbar">
+            <nav>
+                <input type="checkbox" name="" id="toggler">
+                <label for="toggler" class="fas fa-bars"></label>
+
+                <div class="left">Harshita Jangid</div>
+                <div class="right">
+                    <a href="index.html">Home</a>
+                    <a href="index.html">About</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contactus.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>I’m open to internships, freelance work, and exciting collaborations. Feel free to drop a message
+                anytime.</p>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"><a href=""></a></i>
+                <span>harshitajangid638@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"><a href=""></a></i>
+                <span>+91 1234567890</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-location-dot"><a href=""></a></i>
+                <span>Ajmer Rajasthan,India</span>
+            </div>
+            <div class="socials">
+                <a href="https://www.linked+in.com/in/harshita-jangid-8b7128375/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Harshita-jangid"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/___harshita__j"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/+914875689765"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+
+            <form>
+                <div class="input">
+                    <input type="text" placeholder="Your Name" required />
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Your Email" required />
+                </div>
+                <div class="input">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <a id="d" href="https://www.dezyneecole.com/"> Dezyne College Ajmer</a><br>
+        <a href="https://instagram.com/___harshita__j"><i class="fab fa-instagram"></i></a>
+        <a href="tel:+918765387659"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/+917586866886"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://github.com/Harshita-jangid"><i class="fab fa-github"></i></a>
+        <br>&copy;All Rights Reserved <br>Designed and Developed By Harshita Jangid <br>
+
+    </footer>
+
+</body>
+
+</html>
